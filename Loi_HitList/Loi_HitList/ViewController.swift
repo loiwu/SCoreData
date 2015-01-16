@@ -40,6 +40,30 @@ class ViewController: UIViewController, UITableViewDataSource {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 1 - before do anything with Core Data, a managed object context is needed.
+        // pull up the application delegate and grab a reference to its managed object context
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        // 2 - Setting a fetch request’s entity property, or alternatively initializing it with init(entityName:), fetches all objects of a particular entity.
+        let fetchRequest = NSFetchRequest(entityName: "Person")
+        
+        // 3 - executeFetchRequest(_:error:) returns an optional array of managed objects that meets the criteria specified by the fetch request
+        var error: NSError?
+        
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            people = results
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\"Loi's List\""
