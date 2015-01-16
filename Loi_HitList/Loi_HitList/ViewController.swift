@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let saveAction = UIAlertAction(title: "Save", style: .Default) {
             (action:UIAlertAction!) -> Void in
             let textField = alert.textFields![0] as UITextField
-            self.names.append(textField.text)
+            self.saveName(textField.text)
             self.tableView.reloadData()
         }
         
@@ -63,6 +63,31 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func saveName(name: String) {
+        // 1 - get a reference to the app delegate
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        // 2 - create a new managed object and insert it into the managed object context
+        let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
+        
+        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        // 3 - set the name attribute using key-value coding
+        person.setValue(name, forKey: "name")
+        
+        // 4 - commit changes to person and save to disk by calling save on the managed object context.
+        var error: NSError?
+        if !managedContext.save(&error) {
+            // if there is ever an error with the save operation, inspect the error and alert the user if necessary.
+            println("Could not save \(error), \(error?.userInfo)")
+        }
+        
+        // 5 -  Insert the new managed object into the people array so that it shows up in the table view when it reloads
+        people.append(person)
     }
 
 
