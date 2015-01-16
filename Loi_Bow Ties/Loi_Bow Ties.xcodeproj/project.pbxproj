@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EC804A21A691D0C00BE5CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A11A691D0C00BE5CAE /* AppDelegate.swift */; };
+		1EC804A51A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A31A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld */; };
+		1EC804A71A691D0C00BE5CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A61A691D0C00BE5CAE /* ViewController.swift */; };
+		1EC804AA1A691D0C00BE5CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EC804A81A691D0C00BE5CAE /* Main.storyboard */; };
+		1EC804AC1A691D0C00BE5CAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC804AB1A691D0C00BE5CAE /* Images.xcassets */; };
+		1EC804AF1A691D0C00BE5CAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC804AD1A691D0C00BE5CAE /* LaunchScreen.xib */; };
+		1EC804BB1A691D0C00BE5CAE /* Loi_Bow_TiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804BA1A691D0C00BE5CAE /* Loi_Bow_TiesTests.swift */; };
+		1EC804C51A691D4B00BE5CAE /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EC804C41A691D4B00BE5CAE /* SampleData.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EC804B51A691D0C00BE5CAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EC804941A691D0C00BE5CAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EC8049B1A691D0C00BE5CAE;
+			remoteInfo = "Loi_Bow Ties";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EC8049C1A691D0C00BE5CAE /* Loi_Bow Ties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Loi_Bow Ties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC804A01A691D0C00BE5CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EC804A11A691D0C00BE5CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EC804A41A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Loi_Bow_Ties.xcdatamodel; sourceTree = "<group>"; };
+		1EC804A61A691D0C00BE5CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EC804A91A691D0C00BE5CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EC804AB1A691D0C00BE5CAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1EC804AE1A691D0C00BE5CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1EC804B41A691D0C00BE5CAE /* Loi_Bow TiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Loi_Bow TiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC804B91A691D0C00BE5CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EC804BA1A691D0C00BE5CAE /* Loi_Bow_TiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loi_Bow_TiesTests.swift; sourceTree = "<group>"; };
+		1EC804C41A691D4B00BE5CAE /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleData.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EC804991A691D0C00BE5CAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EC804B11A691D0C00BE5CAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EC804931A691D0C00BE5CAE = {
+			isa = PBXGroup;
+			children = (
+				1EC8049E1A691D0C00BE5CAE /* Loi_Bow Ties */,
+				1EC804B71A691D0C00BE5CAE /* Loi_Bow TiesTests */,
+				1EC8049D1A691D0C00BE5CAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EC8049D1A691D0C00BE5CAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EC8049C1A691D0C00BE5CAE /* Loi_Bow Ties.app */,
+				1EC804B41A691D0C00BE5CAE /* Loi_Bow TiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EC8049E1A691D0C00BE5CAE /* Loi_Bow Ties */ = {
+			isa = PBXGroup;
+			children = (
+				1EC804A11A691D0C00BE5CAE /* AppDelegate.swift */,
+				1EC804A61A691D0C00BE5CAE /* ViewController.swift */,
+				1EC804A81A691D0C00BE5CAE /* Main.storyboard */,
+				1EC804AB1A691D0C00BE5CAE /* Images.xcassets */,
+				1EC804C41A691D4B00BE5CAE /* SampleData.plist */,
+				1EC804AD1A691D0C00BE5CAE /* LaunchScreen.xib */,
+				1EC804A31A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld */,
+				1EC8049F1A691D0C00BE5CAE /* Supporting Files */,
+			);
+			path = "Loi_Bow Ties";
+			sourceTree = "<group>";
+		};
+		1EC8049F1A691D0C00BE5CAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EC804A01A691D0C00BE5CAE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1EC804B71A691D0C00BE5CAE /* Loi_Bow TiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EC804BA1A691D0C00BE5CAE /* Loi_Bow_TiesTests.swift */,
+				1EC804B81A691D0C00BE5CAE /* Supporting Files */,
+			);
+			path = "Loi_Bow TiesTests";
+			sourceTree = "<group>";
+		};
+		1EC804B81A691D0C00BE5CAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EC804B91A691D0C00BE5CAE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EC8049B1A691D0C00BE5CAE /* Loi_Bow Ties */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EC804BE1A691D0C00BE5CAE /* Build configuration list for PBXNativeTarget "Loi_Bow Ties" */;
+			buildPhases = (
+				1EC804981A691D0C00BE5CAE /* Sources */,
+				1EC804991A691D0C00BE5CAE /* Frameworks */,
+				1EC8049A1A691D0C00BE5CAE /* Resources */,
+				1EE1C0001A6921D400F4C622 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Loi_Bow Ties";
+			productName = "Loi_Bow Ties";
+			productReference = 1EC8049C1A691D0C00BE5CAE /* Loi_Bow Ties.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EC804B31A691D0C00BE5CAE /* Loi_Bow TiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EC804C11A691D0C00BE5CAE /* Build configuration list for PBXNativeTarget "Loi_Bow TiesTests" */;
+			buildPhases = (
+				1EC804B01A691D0C00BE5CAE /* Sources */,
+				1EC804B11A691D0C00BE5CAE /* Frameworks */,
+				1EC804B21A691D0C00BE5CAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EC804B61A691D0C00BE5CAE /* PBXTargetDependency */,
+			);
+			name = "Loi_Bow TiesTests";
+			productName = "Loi_Bow TiesTests";
+			productReference = 1EC804B41A691D0C00BE5CAE /* Loi_Bow TiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EC804941A691D0C00BE5CAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GWrabbit;
+				TargetAttributes = {
+					1EC8049B1A691D0C00BE5CAE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					1EC804B31A691D0C00BE5CAE = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1EC8049B1A691D0C00BE5CAE;
+					};
+				};
+			};
+			buildConfigurationList = 1EC804971A691D0C00BE5CAE /* Build configuration list for PBXProject "Loi_Bow Ties" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EC804931A691D0C00BE5CAE;
+			productRefGroup = 1EC8049D1A691D0C00BE5CAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EC8049B1A691D0C00BE5CAE /* Loi_Bow Ties */,
+				1EC804B31A691D0C00BE5CAE /* Loi_Bow TiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EC8049A1A691D0C00BE5CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC804AA1A691D0C00BE5CAE /* Main.storyboard in Resources */,
+				1EC804AF1A691D0C00BE5CAE /* LaunchScreen.xib in Resources */,
+				1EC804C51A691D4B00BE5CAE /* SampleData.plist in Resources */,
+				1EC804AC1A691D0C00BE5CAE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EC804B21A691D0C00BE5CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EE1C0001A6921D400F4C622 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION != Release ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n#increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nbuildnum=$(expr $buildnum + 0001)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\n\nelse\necho $CONFIGURATION \" build - Not bumping build number.\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EC804981A691D0C00BE5CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC804A71A691D0C00BE5CAE /* ViewController.swift in Sources */,
+				1EC804A51A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld in Sources */,
+				1EC804A21A691D0C00BE5CAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EC804B01A691D0C00BE5CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC804BB1A691D0C00BE5CAE /* Loi_Bow_TiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EC804B61A691D0C00BE5CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EC8049B1A691D0C00BE5CAE /* Loi_Bow Ties */;
+			targetProxy = 1EC804B51A691D0C00BE5CAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EC804A81A691D0C00BE5CAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EC804A91A691D0C00BE5CAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EC804AD1A691D0C00BE5CAE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EC804AE1A691D0C00BE5CAE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EC804BC1A691D0C00BE5CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1EC804BD1A691D0C00BE5CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EC804BF1A691D0C00BE5CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Loi_Bow Ties/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EC804C01A691D0C00BE5CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Loi_Bow Ties/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1EC804C21A691D0C00BE5CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Loi_Bow TiesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loi_Bow Ties.app/Loi_Bow Ties";
+			};
+			name = Debug;
+		};
+		1EC804C31A691D0C00BE5CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Loi_Bow TiesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loi_Bow Ties.app/Loi_Bow Ties";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EC804971A691D0C00BE5CAE /* Build configuration list for PBXProject "Loi_Bow Ties" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EC804BC1A691D0C00BE5CAE /* Debug */,
+				1EC804BD1A691D0C00BE5CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EC804BE1A691D0C00BE5CAE /* Build configuration list for PBXNativeTarget "Loi_Bow Ties" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EC804BF1A691D0C00BE5CAE /* Debug */,
+				1EC804C01A691D0C00BE5CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EC804C11A691D0C00BE5CAE /* Build configuration list for PBXNativeTarget "Loi_Bow TiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EC804C21A691D0C00BE5CAE /* Debug */,
+				1EC804C31A691D0C00BE5CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1EC804A31A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1EC804A41A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodel */,
+			);
+			currentVersion = 1EC804A41A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodel */;
+			path = Loi_Bow_Ties.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1EC804941A691D0C00BE5CAE /* Project object */;
+}
