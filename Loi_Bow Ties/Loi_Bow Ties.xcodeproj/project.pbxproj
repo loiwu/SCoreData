@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5BA0941A6CA12D00B908D8 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5BA0931A6CA12D00B908D8 /* Bowtie.swift */; };
 		1EC804A21A691D0C00BE5CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A11A691D0C00BE5CAE /* AppDelegate.swift */; };
 		1EC804A51A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A31A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld */; };
 		1EC804A71A691D0C00BE5CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC804A61A691D0C00BE5CAE /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E5BA0931A6CA12D00B908D8 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		1EC8049C1A691D0C00BE5CAE /* Loi_Bow Ties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Loi_Bow Ties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC804A01A691D0C00BE5CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EC804A11A691D0C00BE5CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1EC804C41A691D4B00BE5CAE /* SampleData.plist */,
 				1EC804AD1A691D0C00BE5CAE /* LaunchScreen.xib */,
 				1EC804A31A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld */,
+				1E5BA0931A6CA12D00B908D8 /* Bowtie.swift */,
 				1EC8049F1A691D0C00BE5CAE /* Supporting Files */,
 			);
 			path = "Loi_Bow Ties";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC804A71A691D0C00BE5CAE /* ViewController.swift in Sources */,
+				1E5BA0941A6CA12D00B908D8 /* Bowtie.swift in Sources */,
 				1EC804A51A691D0C00BE5CAE /* Loi_Bow_Ties.xcdatamodeld in Sources */,
 				1EC804A21A691D0C00BE5CAE /* AppDelegate.swift in Sources */,
 			);
