@@ -22,7 +22,7 @@
 		<key>0E7AE0029814B2D547B48CC78A712ABB76E3CF48</key>
 		<string>../../..</string>
 		<key>BCF51171F118738F715104FB99DBC56FE48A16BA</key>
-		<string>../../../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/loiwu/SCoreData.git</string>
@@ -38,7 +38,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>BCF51171F118738F715104FB99DBC56FE48A16BA</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

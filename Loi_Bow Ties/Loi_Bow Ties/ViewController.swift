@@ -41,6 +41,51 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func insertSampleData() {
+        let fetchRequest = NSFetchRequest(entityName: "Bowtie")
+        fetchRequest.predicate = NSPredicate(format: "serach != nil")
+        let count = managedContext.countForFetchRequest(fetchRequest, error: nil)
+        if count > 0 { return }
+        let path = NSBundle.mainBundle().pathForResource("SampleData", ofType: "plist")
+        let dataArray = NSArray(contentsOfFile: path!)!
+        for dict : AnyObject in dataArray {
+            
+            let entity = NSEntityDescription.entityForName("Bowtie", inManagedObjectContext: managedContext)
+            
+            let bowtie = Bowtie(entity: entity!, insertIntoManagedObjectContext: managedContext)
+            
+            let btDict = dict as NSDictionary
+            
+            bowtie.name = btDict["name"] as NSString
+            bowtie.searchKey = btDict["searchKey"] as NSString
+            bowtie.rating = btDict["rating"] as NSNumber
+            let tintColorDict = btDict["tintColor"] as NSDictionary
+            bowtie.tintColor = colorFromDict(tintColorDict)
+            
+            let imageName = btDict["imageName"] as NSString
+            let image = UIImage(named: imageName)
+            let photoData = UIImagePNGRepresentation(image)
+            bowtie.photoData = photoData
+            
+            bowtie.lastWorn = btDict["lastWorn"] as NSDate
+            bowtie.timesWorn = btDict["timesWorn"] as NSNumber
+            bowtie.isFavorite = btDict["isFavorite"] as NSNumber
+        }
+        
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error!.userInfo)")
+        }
+    }
+    
+    func colorFromDict(dict: NSDictionary) -> UIColor {
+        let red = dict["red"] as NSNumber
+        let green = dict["green"] as NSNumber
+        let blue = dict["blue"] as NSNumber
+        let color = UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1)
+        return color
+    }
 
 
 }
