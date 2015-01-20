@@ -9,3 +9,8 @@ a few rough edges in HitList:
 (2) use KVC to access the attributes rather than some more natural way
 
 # Bow Ties
+2: NSManagedObject Subclasses
+fetching and saving
+create managed object subclasses in Swift
+explored different types of Core Data attributes
+validation.
