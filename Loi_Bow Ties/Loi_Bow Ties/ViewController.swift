@@ -23,7 +23,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        insertSampleData()
+        
+        let request = NSFetchRequest(entityName:"Bowtie")
+        let firstTitle = segmentedControl.titleForSegmentAtIndex(0)
+        
+        request.predicate =
+            NSPredicate(format:"searchKey == %@", firstTitle!)
+        
+        var error: NSError? = nil
+        
+        var results =
+        managedContext.executeFetchRequest(request,
+            error: &error) as [Bowtie]?
+        
+        if let bowties = results {
+            //currentBowtie = bowties[0]
+            populate(bowties[0])
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+
     }
 
     @IBAction func segmentedControl(control: UISegmentedControl) {
@@ -42,18 +62,48 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func populate(bowtie: Bowtie) {
+        imageView.image = UIImage(data:bowtie.photoData)
+        nameLabel.text = bowtie.name
+        ratingLabel.text = "Rating: \(bowtie.rating.doubleValue)/5"
+        
+        timesWornLabel.text =
+        "# times worn: \(bowtie.timesWorn.integerValue)"
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .ShortStyle
+        dateFormatter.timeStyle = .NoStyle
+        
+        lastWornLabel.text = "Last worn: " +
+            dateFormatter.stringFromDate(bowtie.lastWorn)
+        
+        favoriteLabel.hidden = !bowtie.isFavorite.boolValue
+        
+        view.tintColor = bowtie.tintColor as UIColor
+    }
+    
     func insertSampleData() {
-        let fetchRequest = NSFetchRequest(entityName: "Bowtie")
-        fetchRequest.predicate = NSPredicate(format: "serach != nil")
-        let count = managedContext.countForFetchRequest(fetchRequest, error: nil)
+        
+        let fetchRequest = NSFetchRequest(entityName:"Bowtie")
+        fetchRequest.predicate = NSPredicate(
+            format: "searchKey != nil")
+        let count = managedContext.countForFetchRequest(fetchRequest,
+            error: nil);
+        
         if count > 0 { return }
-        let path = NSBundle.mainBundle().pathForResource("SampleData", ofType: "plist")
+        
+        let path = NSBundle.mainBundle().pathForResource("SampleData",
+            ofType: "plist")
+        
         let dataArray = NSArray(contentsOfFile: path!)!
+        
         for dict : AnyObject in dataArray {
             
-            let entity = NSEntityDescription.entityForName("Bowtie", inManagedObjectContext: managedContext)
+            let entity =  NSEntityDescription.entityForName("Bowtie",
+                inManagedObjectContext: managedContext)
             
-            let bowtie = Bowtie(entity: entity!, insertIntoManagedObjectContext: managedContext)
+            let bowtie = Bowtie(entity: entity!,
+                insertIntoManagedObjectContext: managedContext)
             
             let btDict = dict as NSDictionary
             
@@ -64,7 +114,7 @@ class ViewController: UIViewController {
             bowtie.tintColor = colorFromDict(tintColorDict)
             
             let imageName = btDict["imageName"] as NSString
-            let image = UIImage(named: imageName)
+            let image = UIImage(named:imageName)
             let photoData = UIImagePNGRepresentation(image)
             bowtie.photoData = photoData
             
