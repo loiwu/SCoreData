@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,9 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var favoriteLabel: UILabel!
     
     var managedContext: NSManagedObjectContext!
+    var currentBowtie: Bowtie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         insertSampleData()
         
         let request = NSFetchRequest(entityName:"Bowtie")
@@ -38,29 +40,84 @@ class ViewController: UIViewController {
             error: &error) as [Bowtie]?
         
         if let bowties = results {
-            //currentBowtie = bowties[0]
-            populate(bowties[0])
+            currentBowtie = bowties[0]
+            populate(currentBowtie)
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
-
     }
-
+    
     @IBAction func segmentedControl(control: UISegmentedControl) {
         
+        let selectedValue =
+        control.titleForSegmentAtIndex(control.selectedSegmentIndex)
+        
+        let fetchRequest = NSFetchRequest(entityName:"Bowtie")
+        
+        fetchRequest.predicate =
+            NSPredicate(format:"searchKey == %@", selectedValue!)
+        
+        var error: NSError?
+        
+        let results =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as [Bowtie]?
+        
+        if let bowties = results {
+            currentBowtie = bowties.last!
+            populate(currentBowtie)
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
     }
     
     @IBAction func wear(sender: AnyObject) {
+        let times = currentBowtie.timesWorn.integerValue
+        currentBowtie.timesWorn = NSNumber(integer: (times + 1))
+        
+        currentBowtie.lastWorn = NSDate()
+        
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error!.userInfo)")
+        }
+        
+        populate(currentBowtie)
     }
     
     @IBAction func rate(sender: AnyObject) {
+        let alert = UIAlertController(title: "New Rating",
+            message: "Rate this bow tie",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+            style: .Default,
+            handler: { (action: UIAlertAction!) in
+                
+        })
+        
+        let saveAction = UIAlertAction(title: "Save",
+            style: .Default,
+            handler: { (action: UIAlertAction!) in
+                
+                let textField = alert.textFields![0] as UITextField
+                self.updateRating(textField.text)
+                
+        })
+        
+        alert.addTextFieldWithConfigurationHandler {
+            (textField: UITextField!) in
+            
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        
+        self.presentViewController(alert,
+            animated: true,
+            completion: nil)
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func populate(bowtie: Bowtie) {
         imageView.image = UIImage(data:bowtie.photoData)
@@ -80,6 +137,23 @@ class ViewController: UIViewController {
         favoriteLabel.hidden = !bowtie.isFavorite.boolValue
         
         view.tintColor = bowtie.tintColor as UIColor
+    }
+    
+    func updateRating(numString: String) {
+        
+        currentBowtie!.rating = (numString as NSString).doubleValue
+        
+        var error: NSError?
+        if !self.managedContext.save(&error) {
+            
+            if error!.code == NSValidationNumberTooLargeError ||
+                error!.code == NSValidationNumberTooSmallError {
+                    
+                    rate(currentBowtie)
+            }
+        } else {
+            populate(currentBowtie)
+        }
     }
     
     func insertSampleData() {
@@ -133,10 +207,14 @@ class ViewController: UIViewController {
         let red = dict["red"] as NSNumber
         let green = dict["green"] as NSNumber
         let blue = dict["blue"] as NSNumber
-        let color = UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1)
-        return color
+        
+        let color = UIColor(red: CGFloat(red)/255.0,
+            green: CGFloat(green)/255.0,
+            blue: CGFloat(blue)/255.0,
+            alpha: 1)
+        
+        return color;
     }
-
-
+    
 }
 
