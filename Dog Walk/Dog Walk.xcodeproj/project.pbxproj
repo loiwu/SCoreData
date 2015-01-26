@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EAC21BB1A76351100F6D729 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC21BA1A76351100F6D729 /* CoreDataStack.swift */; };
 		D953A3AE1A74CE7600DFFFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953A3AD1A74CE7600DFFFC0 /* AppDelegate.swift */; };
 		D953A3B01A74CE7600DFFFC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953A3AF1A74CE7600DFFFC0 /* ViewController.swift */; };
 		D953A3B31A74CE7600DFFFC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D953A3B11A74CE7600DFFFC0 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EAC21BA1A76351100F6D729 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D953A3A81A74CE7600DFFFC0 /* Dog Walk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Walk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D953A3AC1A74CE7600DFFFC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D953A3AD1A74CE7600DFFFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				D953A3B41A74CE7600DFFFC0 /* Images.xcassets */,
 				D953A3B61A74CE7600DFFFC0 /* LaunchScreen.xib */,
 				D953A3AB1A74CE7600DFFFC0 /* Supporting Files */,
+				1EAC21BA1A76351100F6D729 /* CoreDataStack.swift */,
 			);
 			path = "Dog Walk";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAC21BB1A76351100F6D729 /* CoreDataStack.swift in Sources */,
 				D953A3B01A74CE7600DFFFC0 /* ViewController.swift in Sources */,
 				D953A3AE1A74CE7600DFFFC0 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				D953A3C91A74CE7700DFFFC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D953A3CA1A74CE7700DFFFC0 /* Build configuration list for PBXNativeTarget "Dog WalkTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				D953A3CC1A74CE7700DFFFC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
