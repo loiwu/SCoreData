@@ -25,5 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        coreDataStack.saveContext()
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        coreDataStack.saveContext()
+    }
 }
 
