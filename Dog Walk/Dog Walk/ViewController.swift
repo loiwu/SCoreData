@@ -14,11 +14,41 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var walks:Array<NSDate> = []
     var managedContext: NSManagedObjectContext!
+    var currentDog: Dog!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        //Insert Dog entity
+        
+        let dogEntity = NSEntityDescription.entityForName("Dog", inManagedObjectContext: managedContext)
+        
+        let dog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
+        
+        let dogName = "Ruby"
+        let dogFetch = NSFetchRequest(entityName: "Dog")
+        dogFetch.predicate = NSPredicate(format: "name == %@", dogName)
+        
+        var error: NSError?
+        
+        let result = managedContext.executeFetchRequest(dogFetch, error: &error) as [Dog]?
+        
+        if let dogs = result {
+            if dogs.count == 0 {
+                currentDog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
+                currentDog.name = dogName
+                
+                if !managedContext.save(&error) {
+                    println("Could not save: \(error)")
+                }
+            } else {
+                currentDog = dogs[0]
+            }
+        } else {
+            println("Could not fetch: \(error)")
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
