@@ -52,7 +52,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return walks.count
+        var numRows = 0
+        
+        if let dog = currentDog? {
+            numRows = dog.walks.count
+        }
+        
+        return numRows
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -65,8 +71,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         dateFormatter.dateStyle = .ShortStyle
         dateFormatter.timeStyle = .MediumStyle
         
-        let date = walks[indexPath.row]
-        cell.textLabel?.text = dateFormatter.stringFromDate(date)
+        let walk = currentDog.walks[indexPath.row] as Walk
+//        let date = walks[indexPath.row]
+        cell.textLabel?.text = dateFormatter.stringFromDate(walk.date)
+//        cell.textLabel?.text = dateFormatter.stringFromDate(date)
         return cell
     }
 
@@ -76,7 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func add(sender: AnyObject) {
-        walks.append(NSDate())
+//        walks.append(NSDate())
         tableView.reloadData()
     }
     
