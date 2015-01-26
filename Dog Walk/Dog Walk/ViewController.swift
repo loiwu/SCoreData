@@ -77,6 +77,30 @@ class ViewController: UIViewController, UITableViewDataSource {
 //        cell.textLabel?.text = dateFormatter.stringFromDate(date)
         return cell
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            // 1 - get a reference to the walk you want to delete.
+            let walkToRemove = currentDog.walks[indexPath.row] as Walk
+            
+            // 2 - Remove the walk from Core Data by calling NSManagedObjectContext’s deleteObject method.
+            managedContext.deleteObject(walkToRemove)
+            
+            // 3 - No changes are final until you save your managed object context, not even deletions!
+            var error: NSError?
+            if !managedContext.save(&error) {
+                println("Could not save: \(error)")
+            }
+            
+            // 4 - animate the table view to tell the user about the deletion.
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
