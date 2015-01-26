@@ -421,6 +421,7 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+			path = "Dog Walk.xcdatamodeld";
 	};
 	rootObject = D953A3A01A74CE7600DFFFC0 /* Project object */;
 }
