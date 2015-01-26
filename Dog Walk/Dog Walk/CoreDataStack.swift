@@ -44,6 +44,13 @@ class CoreDataStack {
         }
     }
     
+    func saveContext() {
+        var error: NSError? = nil
+        if context.hasChanges && !context.save(&error) {
+            println("Could not save: \(error), \(error?.userInfo)")
+        }
+    }
+    
     func applicationDocumentsDirectory() -> NSURL {
         let fileManager = NSFileManager.defaultManager()
         
