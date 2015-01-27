@@ -16,12 +16,36 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
     var fetchRequest: NSFetchRequest!
     var venues: [Venue]!
 
+    var asyncFetchRequest: NSAsynchronousFetchRequest!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
+        //      //1
         fetchRequest = NSFetchRequest(entityName: "Venue")
-        fetchAndReload()
+        
+        //2
+        asyncFetchRequest =
+            NSAsynchronousFetchRequest(fetchRequest: fetchRequest)
+                { [unowned self] (result: NSAsynchronousFetchResult! )
+                    -> Void in
+                    
+                    self.venues = result.finalResult as [Venue]
+                    self.tableView.reloadData()
+        }
+        
+        //3
+        var error: NSError?
+        let results =
+        coreDataStack.context.executeRequest(asyncFetchRequest,
+            error: &error)
+        
+        if let persistentStoreResults = results {
+            //Returns immediately, cancel here if you want
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+
     }
     
     func tableView(tableView: UITableView?,
