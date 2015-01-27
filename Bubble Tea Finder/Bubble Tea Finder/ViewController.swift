@@ -14,7 +14,8 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     var coreDataStack: CoreDataStack!
     var fetchRequest: NSFetchRequest!
-    var venues: [Venue]!
+//    var venues: [Venue]!
+    var venues: [Venue]! = []
 
     var asyncFetchRequest: NSAsynchronousFetchRequest!
     
