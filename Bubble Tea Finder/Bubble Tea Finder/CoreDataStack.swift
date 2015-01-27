@@ -22,7 +22,7 @@ class CoreDataStack {
         
         psc = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        context = NSManagedObjectContext()
+        context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         context.persistentStoreCoordinator = psc
         
         let documentsURL = applicationDocumentsDirectory()
