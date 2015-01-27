@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FilterViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var coreDataStack: CoreDataStack!
@@ -70,6 +70,26 @@ class ViewController: UIViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    //MARK - FilterViewControllerDelegate methods
+    
+    func filterViewController(filter: FilterViewController,
+        didSelectPredicate predicate:NSPredicate?,
+        sortDescriptor:NSSortDescriptor?) {
+            
+            fetchRequest.predicate = nil
+            fetchRequest.sortDescriptors = nil
+            
+            if let fetchPredicate = predicate {
+                fetchRequest.predicate = fetchPredicate
+            }
+            
+            if let sr = sortDescriptor {
+                fetchRequest.sortDescriptors = [sr]
+            }
+            
+            fetchAndReload()
     }
 }
 
