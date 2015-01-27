@@ -14,3 +14,17 @@ fetching and saving
 create managed object subclasses in Swift
 explored different types of Core Data attributes
 validation.
+
+# Dog Walk
+3: The Core Data Stack
+The stack is made up of four Core Data classes:
+• NSManagedObjectModel
+• NSPersistentStore
+• NSPersistentStoreCoordinator • NSManagedObjectContext
+
+# Bubble Tea
+4: Intermediate Fetching
+• fetch only what you need to;
+• refine your fetched results using predicates;
+• fetch in the background to avoid blocking the UI; and
+• avoid unnecessary fetching by updating objects directly in the persistent store.
