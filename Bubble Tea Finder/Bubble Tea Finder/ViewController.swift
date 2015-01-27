@@ -50,6 +50,7 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
             let filterVC = navController.topViewController as FilterViewController
             
             //propagates the CoreDataStack object from ViewController to FilterViewController
+            filterVC.delegate = self
             filterVC.coreDataStack = coreDataStack
         }
     }
