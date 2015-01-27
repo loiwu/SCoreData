@@ -44,10 +44,16 @@ class FilterViewController: UITableViewController {
         return predicate!
         }()
     
+    lazy var expensiveVenuePredicate: NSPredicate = {
+        var predicate = NSPredicate(format: "priceInfo.priceCategory == %@", "$$$")
+        return predicate!
+        }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateCheapVenueCountLabel()
         populateModerateVenueCountLabel()
+        populateExpensiveVenueCountLabel()
     }
     
     //MARK - UITableViewDelegate methods
@@ -105,6 +111,21 @@ class FilterViewController: UITableViewController {
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
+    }
+    
+    func populateExpensiveVenueCountLabel() {
+        // $$$ fetch request
+        
+        let fetchRequest = NSFetchRequest(entityName: "Venue")
+        fetchRequest.predicate = expensiveVenuePredicate
+        
+        var error: NSError?
+        let count = coreDataStack.context.countForFetchRequest(fetchRequest, error: &error)
+        if count == NSNotFound {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+        thirdPriceCategoryLabel.text =
+        "\(count) bubble tea places"
     }
 
 }
