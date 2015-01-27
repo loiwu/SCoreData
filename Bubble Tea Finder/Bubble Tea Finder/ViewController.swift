@@ -22,7 +22,23 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //      //1
+        let batchUpdate = NSBatchUpdateRequest(entityName: "Venue")
+        batchUpdate.propertiesToUpdate = ["favorite" : NSNumber(bool: true)]
+        batchUpdate.affectedStores = coreDataStack.psc.persistentStores
+        batchUpdate.resultType = .UpdatedObjectsCountResultType
+        
+        var batchError: NSError?
+        let batchResult =
+        coreDataStack.context.executeRequest(batchUpdate,
+            error: &batchError) as NSBatchUpdateResult?
+        
+        if let result = batchResult {
+            println("Records updated \(result.result!)")
+        } else {
+            println("Could not update \(batchError), \(batchError!.userInfo)")
+        }
+
+        //1
         fetchRequest = NSFetchRequest(entityName: "Venue")
         
         //2
