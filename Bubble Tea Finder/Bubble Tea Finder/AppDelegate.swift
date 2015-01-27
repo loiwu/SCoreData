@@ -32,6 +32,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func importJSONSeedDataIfNeeded() {
+        
+        let fetchRequest = NSFetchRequest(entityName: "Venue")
+        var error: NSError? = nil
+        
+        let results =
+        coreDataStack.context.countForFetchRequest(fetchRequest,
+            error: &error)
+        
+        if (results == 0) {
+            
+            var fetchError: NSError? = nil
+            
+            let results =
+            coreDataStack.context.executeFetchRequest(fetchRequest,
+                error: &fetchError) as [Venue]
+            
+            for object in results {
+                let team = object as Venue
+                coreDataStack.context.deleteObject(team)
+            }
+            
+            coreDataStack.saveContext()
+            importJSONSeedData()
+        }
+    }
+    
+    func importJSONSeedData() {
         let jsonURL = NSBundle.mainBundle().URLForResource("seed", withExtension: "json")
         let jsonData = NSData(contentsOfURL: jsonURL!)
         
