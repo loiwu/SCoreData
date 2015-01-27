@@ -58,6 +58,20 @@ class FilterViewController: UITableViewController {
         return predicate!
         }()
     
+    lazy var offeringDealPredicate: NSPredicate = {
+        var pr = NSPredicate(format: "specialCount > 0")
+        return pr!
+        }()
+    
+    lazy var walkingDistancePredicate: NSPredicate = {
+        var pr = NSPredicate(format: "location.distance < 500")
+        return pr!
+        }()
+    lazy var hasUserTipsPredicate: NSPredicate = {
+        var pr = NSPredicate(format: "stats.tipCount > 0")
+        return pr!
+        }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateCheapVenueCountLabel()
@@ -69,19 +83,29 @@ class FilterViewController: UITableViewController {
     //MARK - UITableViewDelegate methods
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)!
-        switch cell {
-            // Price section
-        case cheapVenueCell:
-            selectedPredicate = cheapVenuePredicate
-        case moderateVenueCell:
-            selectedPredicate = moderateVenuePredicate
-        case expensiveVenueCell:
-            selectedPredicate = expensiveVenuePredicate
-        default:
+            let cell = tableView.cellForRowAtIndexPath(indexPath)!
+            
+            switch cell {
+        // Price section
+            case cheapVenueCell:
+                selectedPredicate = cheapVenuePredicate
+            case moderateVenueCell:
+                selectedPredicate = moderateVenuePredicate
+            case expensiveVenueCell:
+                selectedPredicate = expensiveVenuePredicate
+        //Most Popular section
+            case offeringDealCell:
+                selectedPredicate = offeringDealPredicate
+            case walkingDistanceCell:
+                selectedPredicate = walkingDistancePredicate
+            case userTipsCell:
+                selectedPredicate = hasUserTipsPredicate
+
+            default:
             println("default case")
-        }
-        cell.accessoryType = .Checkmark
+            }
+            
+            cell.accessoryType = .Checkmark
     }
     
     // MARK - UIButton target action
