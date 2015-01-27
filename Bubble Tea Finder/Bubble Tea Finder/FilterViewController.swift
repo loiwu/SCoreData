@@ -67,9 +67,29 @@ class FilterViewController: UITableViewController {
         var pr = NSPredicate(format: "location.distance < 500")
         return pr!
         }()
+    
     lazy var hasUserTipsPredicate: NSPredicate = {
         var pr = NSPredicate(format: "stats.tipCount > 0")
         return pr!
+        }()
+    
+    lazy var nameSortDescriptor: NSSortDescriptor = {
+            var sd = NSSortDescriptor(key: "name",
+        ascending: true,
+        selector: "localizedStandardCompare:")
+            return sd
+            }()
+    
+    lazy var distanceSortDescriptor: NSSortDescriptor = {
+        var sd = NSSortDescriptor(key: "location.distance",
+                ascending: true)
+        return sd
+        }()
+    
+    lazy var priceSortDescriptor: NSSortDescriptor = {
+        var sd = NSSortDescriptor(key: "priceInfo.priceCategory",
+        ascending: true)
+        return sd
         }()
     
     override func viewDidLoad() {
@@ -100,6 +120,15 @@ class FilterViewController: UITableViewController {
                 selectedPredicate = walkingDistancePredicate
             case userTipsCell:
                 selectedPredicate = hasUserTipsPredicate
+        //Sort By section
+            case nameAZSortCell:
+                selectedSortDescriptor = nameSortDescriptor
+            case nameZASortCell:
+                selectedSortDescriptor = nameSortDescriptor.reversedSortDescriptor as? NSSortDescriptor
+            case distanceSortCell:
+                selectedSortDescriptor = distanceSortDescriptor
+            case priceSortCell:
+                selectedSortDescriptor = priceSortDescriptor
 
             default:
             println("default case")
