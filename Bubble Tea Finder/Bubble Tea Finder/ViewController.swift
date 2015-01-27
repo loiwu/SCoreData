@@ -19,8 +19,8 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
-        
+//        fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
+        fetchRequest = NSFetchRequest(entityName: "Venue")
         fetchAndReload()
     }
     
