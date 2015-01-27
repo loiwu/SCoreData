@@ -54,6 +54,7 @@ class FilterViewController: UITableViewController {
         populateCheapVenueCountLabel()
         populateModerateVenueCountLabel()
         populateExpensiveVenueCountLabel()
+        populateDealsCountLabel()
     }
     
     //MARK - UITableViewDelegate methods
@@ -126,6 +127,43 @@ class FilterViewController: UITableViewController {
         }
         thirdPriceCategoryLabel.text =
         "\(count) bubble tea places"
+    }
+    
+    func populateDealsCountLabel() {
+            //1
+            let fetchRequest = NSFetchRequest(entityName: "Venue")
+            fetchRequest.resultType = .DictionaryResultType
+            
+            //2
+            let sumExpressionDesc = NSExpressionDescription()
+            sumExpressionDesc.name = "sumDeals"
+            
+            //3
+            sumExpressionDesc.expression =
+                NSExpression(forFunction: "sum:",
+                arguments:[NSExpression(forKeyPath: "specialCount")])
+            
+            sumExpressionDesc.expressionResultType =
+                .Integer32AttributeType
+            
+            //4
+            fetchRequest.propertiesToFetch = [sumExpressionDesc]
+            
+            //5
+            var error: NSError?
+            let result =
+            coreDataStack.context.executeFetchRequest(fetchRequest,
+                error: &error) as [NSDictionary]?
+            
+            if let resultArray = result {
+                
+                let resultDict = resultArray[0]
+                let numDeals: AnyObject? = resultDict["sumDeals"]
+                numDealsLabel.text = "\(numDeals!) total deals"
+                
+            } else {
+                println("Could not fetch \(error), \(error!.userInfo)")
+            }
     }
 
 }
