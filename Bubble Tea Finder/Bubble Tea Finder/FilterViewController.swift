@@ -38,6 +38,9 @@ class FilterViewController: UITableViewController {
     @IBOutlet weak var distanceSortCell: UITableViewCell!
     @IBOutlet weak var priceSortCell: UITableViewCell!
     
+    weak var delegate: FilterViewControllerDelegate?
+    var selectedSortDescriptor: NSSortDescriptor?
+    var selectedPredicate: NSPredicate?
     var coreDataStack: CoreDataStack!
     
     lazy var cheapVenuePredicate: NSPredicate = {
