@@ -48,6 +48,9 @@ class ViewController: UIViewController {
             
             let navController = segue.destinationViewController as UINavigationController
             let filterVC = navController.topViewController as FilterViewController
+            
+            //propagates the CoreDataStack object from ViewController to FilterViewController
+            filterVC.coreDataStack = coreDataStack
         }
     }
     

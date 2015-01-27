@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FilterViewController: UITableViewController {
     
@@ -31,6 +32,23 @@ class FilterViewController: UITableViewController {
     @IBOutlet weak var distanceSortCell: UITableViewCell!
     @IBOutlet weak var priceSortCell: UITableViewCell!
     
+    var coreDataStack: CoreDataStack!
+    
+    lazy var cheapVenuePredicate: NSPredicate = {
+        var predicate = NSPredicate(format: "priceInfo.priceCategory == %@", "$")
+        return predicate!
+    }()
+    
+    lazy var moderateVenuePredicate: NSPredicate = {
+        var predicate = NSPredicate(format: "priceInfo.priceCategory == %@", "$$")
+        return predicate!
+        }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        populateCheapVenueCountLabel()
+        populateModerateVenueCountLabel()
+    }
     
     //MARK - UITableViewDelegate methods
     
@@ -45,4 +63,48 @@ class FilterViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion:nil)
     }
     
+    func populateCheapVenueCountLabel() {
+        // $ fetch request
+        
+        let fetchRequest = NSFetchRequest(entityName: "Venue")
+        fetchRequest.resultType = .CountResultType
+        fetchRequest.predicate = cheapVenuePredicate
+        
+        var error: NSError?
+        
+        let result = coreDataStack.context.executeFetchRequest(fetchRequest, error: &error) as [NSNumber]?
+        
+        if let countArray = result {
+            let count = countArray[0].integerValue
+            
+            firstPriceCategoryLabel.text = "\(count) bubble tea places"
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
+    
+    func populateModerateVenueCountLabel() {
+        // $$ fetch request
+        
+        let fetchRequest = NSFetchRequest(entityName: "Venue")
+        fetchRequest.resultType = .CountResultType
+        fetchRequest.predicate = moderateVenuePredicate
+        
+        var error: NSError?
+        let result =
+        coreDataStack.context.executeFetchRequest(fetchRequest,
+            error: &error) as [NSNumber]?
+        
+        if let countArray = result {
+            
+            let count = countArray[0].integerValue
+            
+            secondPriceCategoryLabel.text =
+            "\(count) bubble tea places"
+            
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
+
 }
