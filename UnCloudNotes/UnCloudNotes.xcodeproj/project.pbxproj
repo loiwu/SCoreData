@@ -56,6 +56,7 @@
 		1E4449A81A78EA99002F04C7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UnCloudNotes.entitlements; sourceTree = "<group>"; };
 		1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +481,7 @@
 		1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */,
 				1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */,
 				1E4449A61A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodel */,
 			);
