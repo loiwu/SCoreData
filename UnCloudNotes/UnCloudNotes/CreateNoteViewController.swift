@@ -30,7 +30,12 @@ class CreateNoteViewController : UIViewController, UITextFieldDelegate, UITextVi
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)
-        titleField.becomeFirstResponder()
+        if let image = _note?.image {
+            attachedPhoto.image = image
+            view.endEditing(true)
+        } else {
+            titleField.becomeFirstResponder()
+        }
     }
     
     @IBAction func saveNote()

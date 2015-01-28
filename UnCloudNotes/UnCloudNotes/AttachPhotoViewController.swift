@@ -29,4 +29,11 @@ class AttachPhotoViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLayoutSubviews()
         imagePicker.view.frame = view.bounds
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary) {
+        if let note = note {
+            note.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }

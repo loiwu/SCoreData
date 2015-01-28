@@ -42,11 +42,14 @@ class NotesListViewController: UITableViewController, NSFetchedResultsController
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as NoteTableViewCell;
-        if let objects = notes.fetchedObjects
-        {
-            cell.note = objects[indexPath.row] as? Note
+        let note = notes.fetchedObjects![indexPath.row] as Note
+        var identifier = "NoteCell"
+        if note.image != nil {
+            identifier = "NoteCellImage"
         }
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as NoteTableViewCell;
+        cell.note = notes.fetchedObjects![indexPath.row] as? Note
+
         return cell
     }
     

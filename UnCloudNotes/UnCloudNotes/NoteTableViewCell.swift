@@ -28,6 +28,9 @@ class NoteTableViewCell: UITableViewCell
         {
             noteTitle.text = note!.title
             noteCreateDate.text = note!.dateCreated.description
+            if let image = note?.image {
+                noteImage.image = image
+            }
         }
     }
     
