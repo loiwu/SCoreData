@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E4449791A78E398002F04C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449781A78E398002F04C7 /* AppDelegate.swift */; };
+		1E44497B1A78E398002F04C7 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44497A1A78E398002F04C7 /* NotesListViewController.swift */; };
+		1E44497D1A78E398002F04C7 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44497C1A78E398002F04C7 /* NoteDetailViewController.swift */; };
+		1E4449801A78E398002F04C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E44497E1A78E398002F04C7 /* Main.storyboard */; };
+		1E4449821A78E398002F04C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4449811A78E398002F04C7 /* Images.xcassets */; };
+		1E4449851A78E398002F04C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4449831A78E398002F04C7 /* LaunchScreen.xib */; };
+		1E4449911A78E398002F04C7 /* UnCloudNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449901A78E398002F04C7 /* UnCloudNotesTests.swift */; };
+		1E44499B1A78E78C002F04C7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44499A1A78E78C002F04C7 /* CoreDataStack.swift */; };
+		1E44499D1A78E99D002F04C7 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44499C1A78E99D002F04C7 /* CreateNoteViewController.swift */; };
+		1E44499F1A78E9C3002F04C7 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44499E1A78E9C3002F04C7 /* NoteTableViewCell.swift */; };
+		1E4449A21A78EA0E002F04C7 /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A11A78EA0E002F04C7 /* ImageTransformer.swift */; };
+		1E4449A41A78EA37002F04C7 /* AttachPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A31A78EA37002F04C7 /* AttachPhotoViewController.swift */; };
+		1E4449A71A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */; };
+		1E4449A91A78EA99002F04C7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A81A78EA99002F04C7 /* Note.swift */; };
+		1E4449AB1A78EC33002F04C7 /* UnCloudNotes.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E44498B1A78E398002F04C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E44496B1A78E398002F04C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E4449721A78E398002F04C7;
+			remoteInfo = UnCloudNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E4449731A78E398002F04C7 /* UnCloudNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnCloudNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4449771A78E398002F04C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E4449781A78E398002F04C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E44497A1A78E398002F04C7 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		1E44497C1A78E398002F04C7 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		1E44497F1A78E398002F04C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E4449811A78E398002F04C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1E4449841A78E398002F04C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1E44498A1A78E398002F04C7 /* UnCloudNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnCloudNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E44498F1A78E398002F04C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E4449901A78E398002F04C7 /* UnCloudNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnCloudNotesTests.swift; sourceTree = "<group>"; };
+		1E44499A1A78E78C002F04C7 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1E44499C1A78E99D002F04C7 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		1E44499E1A78E9C3002F04C7 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		1E4449A01A78E9E7002F04C7 /* NotesListViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NotesListViewController+Additions.h"; sourceTree = "<group>"; };
+		1E4449A11A78EA0E002F04C7 /* ImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
+		1E4449A31A78EA37002F04C7 /* AttachPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachPhotoViewController.swift; sourceTree = "<group>"; };
+		1E4449A61A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UnCloudNotesDataModel.xcdatamodel; sourceTree = "<group>"; };
+		1E4449A81A78EA99002F04C7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UnCloudNotes.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E4449701A78E398002F04C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4449871A78E398002F04C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E44496A1A78E398002F04C7 = {
+			isa = PBXGroup;
+			children = (
+				1E4449751A78E398002F04C7 /* UnCloudNotes */,
+				1E44498D1A78E398002F04C7 /* UnCloudNotesTests */,
+				1E4449741A78E398002F04C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E4449741A78E398002F04C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E4449731A78E398002F04C7 /* UnCloudNotes.app */,
+				1E44498A1A78E398002F04C7 /* UnCloudNotesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E4449751A78E398002F04C7 /* UnCloudNotes */ = {
+			isa = PBXGroup;
+			children = (
+				1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */,
+				1E4449781A78E398002F04C7 /* AppDelegate.swift */,
+				1E44497A1A78E398002F04C7 /* NotesListViewController.swift */,
+				1E44497C1A78E398002F04C7 /* NoteDetailViewController.swift */,
+				1E44497E1A78E398002F04C7 /* Main.storyboard */,
+				1E4449811A78E398002F04C7 /* Images.xcassets */,
+				1E4449831A78E398002F04C7 /* LaunchScreen.xib */,
+				1E4449761A78E398002F04C7 /* Supporting Files */,
+				1E44499A1A78E78C002F04C7 /* CoreDataStack.swift */,
+				1E44499C1A78E99D002F04C7 /* CreateNoteViewController.swift */,
+				1E44499E1A78E9C3002F04C7 /* NoteTableViewCell.swift */,
+				1E4449A01A78E9E7002F04C7 /* NotesListViewController+Additions.h */,
+				1E4449A11A78EA0E002F04C7 /* ImageTransformer.swift */,
+				1E4449A31A78EA37002F04C7 /* AttachPhotoViewController.swift */,
+				1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */,
+				1E4449A81A78EA99002F04C7 /* Note.swift */,
+			);
+			path = UnCloudNotes;
+			sourceTree = "<group>";
+		};
+		1E4449761A78E398002F04C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E4449771A78E398002F04C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E44498D1A78E398002F04C7 /* UnCloudNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E4449901A78E398002F04C7 /* UnCloudNotesTests.swift */,
+				1E44498E1A78E398002F04C7 /* Supporting Files */,
+			);
+			path = UnCloudNotesTests;
+			sourceTree = "<group>";
+		};
+		1E44498E1A78E398002F04C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E44498F1A78E398002F04C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E4449721A78E398002F04C7 /* UnCloudNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4449941A78E398002F04C7 /* Build configuration list for PBXNativeTarget "UnCloudNotes" */;
+			buildPhases = (
+				1E44496F1A78E398002F04C7 /* Sources */,
+				1E4449701A78E398002F04C7 /* Frameworks */,
+				1E4449711A78E398002F04C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnCloudNotes;
+			productName = UnCloudNotes;
+			productReference = 1E4449731A78E398002F04C7 /* UnCloudNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E4449891A78E398002F04C7 /* UnCloudNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4449971A78E398002F04C7 /* Build configuration list for PBXNativeTarget "UnCloudNotesTests" */;
+			buildPhases = (
+				1E4449861A78E398002F04C7 /* Sources */,
+				1E4449871A78E398002F04C7 /* Frameworks */,
+				1E4449881A78E398002F04C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E44498C1A78E398002F04C7 /* PBXTargetDependency */,
+			);
+			name = UnCloudNotesTests;
+			productName = UnCloudNotesTests;
+			productReference = 1E44498A1A78E398002F04C7 /* UnCloudNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E44496B1A78E398002F04C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GWrabbit;
+				TargetAttributes = {
+					1E4449721A78E398002F04C7 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					1E4449891A78E398002F04C7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1E4449721A78E398002F04C7;
+					};
+				};
+			};
+			buildConfigurationList = 1E44496E1A78E398002F04C7 /* Build configuration list for PBXProject "UnCloudNotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E44496A1A78E398002F04C7;
+			productRefGroup = 1E4449741A78E398002F04C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E4449721A78E398002F04C7 /* UnCloudNotes */,
+				1E4449891A78E398002F04C7 /* UnCloudNotesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E4449711A78E398002F04C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4449801A78E398002F04C7 /* Main.storyboard in Resources */,
+				1E4449851A78E398002F04C7 /* LaunchScreen.xib in Resources */,
+				1E4449AB1A78EC33002F04C7 /* UnCloudNotes.entitlements in Resources */,
+				1E4449821A78E398002F04C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4449881A78E398002F04C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E44496F1A78E398002F04C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4449A71A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld in Sources */,
+				1E4449A41A78EA37002F04C7 /* AttachPhotoViewController.swift in Sources */,
+				1E44497D1A78E398002F04C7 /* NoteDetailViewController.swift in Sources */,
+				1E44497B1A78E398002F04C7 /* NotesListViewController.swift in Sources */,
+				1E4449A21A78EA0E002F04C7 /* ImageTransformer.swift in Sources */,
+				1E4449A91A78EA99002F04C7 /* Note.swift in Sources */,
+				1E4449791A78E398002F04C7 /* AppDelegate.swift in Sources */,
+				1E44499D1A78E99D002F04C7 /* CreateNoteViewController.swift in Sources */,
+				1E44499B1A78E78C002F04C7 /* CoreDataStack.swift in Sources */,
+				1E44499F1A78E9C3002F04C7 /* NoteTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4449861A78E398002F04C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4449911A78E398002F04C7 /* UnCloudNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E44498C1A78E398002F04C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E4449721A78E398002F04C7 /* UnCloudNotes */;
+			targetProxy = 1E44498B1A78E398002F04C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E44497E1A78E398002F04C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E44497F1A78E398002F04C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E4449831A78E398002F04C7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E4449841A78E398002F04C7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E4449921A78E398002F04C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E4449931A78E398002F04C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E4449951A78E398002F04C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UnCloudNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E4449961A78E398002F04C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UnCloudNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E4449981A78E398002F04C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UnCloudNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnCloudNotes.app/UnCloudNotes";
+			};
+			name = Debug;
+		};
+		1E4449991A78E398002F04C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UnCloudNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnCloudNotes.app/UnCloudNotes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E44496E1A78E398002F04C7 /* Build configuration list for PBXProject "UnCloudNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4449921A78E398002F04C7 /* Debug */,
+				1E4449931A78E398002F04C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4449941A78E398002F04C7 /* Build configuration list for PBXNativeTarget "UnCloudNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4449951A78E398002F04C7 /* Debug */,
+				1E4449961A78E398002F04C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4449971A78E398002F04C7 /* Build configuration list for PBXNativeTarget "UnCloudNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4449981A78E398002F04C7 /* Debug */,
+				1E4449991A78E398002F04C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E4449A61A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodel */,
+			);
+			currentVersion = 1E4449A61A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodel */;
+			path = UnCloudNotesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1E44496B1A78E398002F04C7 /* Project object */;
+}
