@@ -28,3 +28,6 @@ The stack is made up of four Core Data classes:
 • refine your fetched results using predicates;
 • fetch in the background to avoid blocking the UI; and
 • avoid unnecessary fetching by updating objects directly in the persistent store.
+
+# World Cup
+5: NSFetchedResultsController
