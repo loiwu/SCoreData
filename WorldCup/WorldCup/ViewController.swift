@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -15,10 +16,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIBarButtonItem!
     
+    var fetchedResultsController : NSFetchedResultsController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        //1
+        let fetchRequest = NSFetchRequest(entityName: "Team")
+        
+        //2
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: coreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        //3
+        var error: NSError? = nil
+        if (!fetchedResultsController.performFetch(&error)) {
+            println("Error: \(error?.localizedDescription)")
+        }
     }
     
     func numberOfSectionsInTableView
