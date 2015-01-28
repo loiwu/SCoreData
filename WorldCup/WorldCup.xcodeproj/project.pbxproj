@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EB508BE1A7899090086C1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508BD1A7899090086C1A7 /* AppDelegate.swift */; };
+		1EB508C01A7899090086C1A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508BF1A7899090086C1A7 /* ViewController.swift */; };
+		1EB508C31A7899090086C1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB508C11A7899090086C1A7 /* Main.storyboard */; };
+		1EB508C51A7899090086C1A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB508C41A7899090086C1A7 /* Images.xcassets */; };
+		1EB508C81A7899090086C1A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB508C61A7899090086C1A7 /* LaunchScreen.xib */; };
+		1EB508D41A7899090086C1A7 /* WorldCupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508D31A7899090086C1A7 /* WorldCupTests.swift */; };
+		1EB508DF1A78AB400086C1A7 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EB508DE1A78AB400086C1A7 /* seed.json */; };
+		1EB508E11A78ABBE0086C1A7 /* attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1EB508E01A78ABBE0086C1A7 /* attribution.txt */; };
+		1EB508E41A78AC300086C1A7 /* WorldCup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508E21A78AC2F0086C1A7 /* WorldCup.xcdatamodeld */; };
+		1EB508E61A78ADC70086C1A7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508E51A78ADC70086C1A7 /* Team.swift */; };
+		1EB508E81A78AF8C0086C1A7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508E71A78AF8C0086C1A7 /* CoreDataStack.swift */; };
+		1EB508EA1A78B5550086C1A7 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB508E91A78B5550086C1A7 /* TeamCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EB508CE1A7899090086C1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EB508B01A7899090086C1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EB508B71A7899090086C1A7;
+			remoteInfo = WorldCup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EB508B81A7899090086C1A7 /* WorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB508BC1A7899090086C1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB508BD1A7899090086C1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EB508BF1A7899090086C1A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EB508C21A7899090086C1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EB508C41A7899090086C1A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1EB508C71A7899090086C1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1EB508CD1A7899090086C1A7 /* WorldCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB508D21A7899090086C1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB508D31A7899090086C1A7 /* WorldCupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTests.swift; sourceTree = "<group>"; };
+		1EB508DE1A78AB400086C1A7 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
+		1EB508E01A78ABBE0086C1A7 /* attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribution.txt; sourceTree = "<group>"; };
+		1EB508E31A78AC300086C1A7 /* WorldCup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorldCup.xcdatamodel; sourceTree = "<group>"; };
+		1EB508E51A78ADC70086C1A7 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		1EB508E71A78AF8C0086C1A7 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1EB508E91A78B5550086C1A7 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EB508B51A7899090086C1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB508CA1A7899090086C1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EB508AF1A7899090086C1A7 = {
+			isa = PBXGroup;
+			children = (
+				1EB508BA1A7899090086C1A7 /* WorldCup */,
+				1EB508D01A7899090086C1A7 /* WorldCupTests */,
+				1EB508B91A7899090086C1A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EB508B91A7899090086C1A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EB508B81A7899090086C1A7 /* WorldCup.app */,
+				1EB508CD1A7899090086C1A7 /* WorldCupTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EB508BA1A7899090086C1A7 /* WorldCup */ = {
+			isa = PBXGroup;
+			children = (
+				1EB508BD1A7899090086C1A7 /* AppDelegate.swift */,
+				1EB508E71A78AF8C0086C1A7 /* CoreDataStack.swift */,
+				1EB508BF1A7899090086C1A7 /* ViewController.swift */,
+				1EB508E91A78B5550086C1A7 /* TeamCell.swift */,
+				1EB508E51A78ADC70086C1A7 /* Team.swift */,
+				1EB508C11A7899090086C1A7 /* Main.storyboard */,
+				1EB508C41A7899090086C1A7 /* Images.xcassets */,
+				1EB508C61A7899090086C1A7 /* LaunchScreen.xib */,
+				1EB508BB1A7899090086C1A7 /* Supporting Files */,
+				1EB508E21A78AC2F0086C1A7 /* WorldCup.xcdatamodeld */,
+			);
+			path = WorldCup;
+			sourceTree = "<group>";
+		};
+		1EB508BB1A7899090086C1A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EB508E01A78ABBE0086C1A7 /* attribution.txt */,
+				1EB508DE1A78AB400086C1A7 /* seed.json */,
+				1EB508BC1A7899090086C1A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1EB508D01A7899090086C1A7 /* WorldCupTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EB508D31A7899090086C1A7 /* WorldCupTests.swift */,
+				1EB508D11A7899090086C1A7 /* Supporting Files */,
+			);
+			path = WorldCupTests;
+			sourceTree = "<group>";
+		};
+		1EB508D11A7899090086C1A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EB508D21A7899090086C1A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EB508B71A7899090086C1A7 /* WorldCup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB508D71A7899090086C1A7 /* Build configuration list for PBXNativeTarget "WorldCup" */;
+			buildPhases = (
+				1EB508B41A7899090086C1A7 /* Sources */,
+				1EB508B51A7899090086C1A7 /* Frameworks */,
+				1EB508B61A7899090086C1A7 /* Resources */,
+				1EB508DD1A78A6270086C1A7 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldCup;
+			productName = WorldCup;
+			productReference = 1EB508B81A7899090086C1A7 /* WorldCup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EB508CC1A7899090086C1A7 /* WorldCupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB508DA1A7899090086C1A7 /* Build configuration list for PBXNativeTarget "WorldCupTests" */;
+			buildPhases = (
+				1EB508C91A7899090086C1A7 /* Sources */,
+				1EB508CA1A7899090086C1A7 /* Frameworks */,
+				1EB508CB1A7899090086C1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EB508CF1A7899090086C1A7 /* PBXTargetDependency */,
+			);
+			name = WorldCupTests;
+			productName = WorldCupTests;
+			productReference = 1EB508CD1A7899090086C1A7 /* WorldCupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EB508B01A7899090086C1A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GWrabbit;
+				TargetAttributes = {
+					1EB508B71A7899090086C1A7 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					1EB508CC1A7899090086C1A7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1EB508B71A7899090086C1A7;
+					};
+				};
+			};
+			buildConfigurationList = 1EB508B31A7899090086C1A7 /* Build configuration list for PBXProject "WorldCup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EB508AF1A7899090086C1A7;
+			productRefGroup = 1EB508B91A7899090086C1A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EB508B71A7899090086C1A7 /* WorldCup */,
+				1EB508CC1A7899090086C1A7 /* WorldCupTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EB508B61A7899090086C1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB508C31A7899090086C1A7 /* Main.storyboard in Resources */,
+				1EB508C81A7899090086C1A7 /* LaunchScreen.xib in Resources */,
+				1EB508DF1A78AB400086C1A7 /* seed.json in Resources */,
+				1EB508C51A7899090086C1A7 /* Images.xcassets in Resources */,
+				1EB508E11A78ABBE0086C1A7 /* attribution.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB508CB1A7899090086C1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EB508DD1A78A6270086C1A7 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION != Release ]; then\n\necho \"Bumping build number...\"\n\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n\n\n#increment the build number (ie 115 to 116)\n\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\n\nif [[ \"${buildnum}\" == \"\" ]]; then\n\necho \"No build number in $plist\"\n\nexit 2\n\nfi\n\n\n\nbuildnum=$(expr $buildnum + 0001)\n\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\n\necho \"Bumped build number to $buildnum\"\n\n\n\nelse\n\necho $CONFIGURATION \" build - Not bumping build number.\"\n\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EB508B41A7899090086C1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB508E81A78AF8C0086C1A7 /* CoreDataStack.swift in Sources */,
+				1EB508E61A78ADC70086C1A7 /* Team.swift in Sources */,
+				1EB508EA1A78B5550086C1A7 /* TeamCell.swift in Sources */,
+				1EB508C01A7899090086C1A7 /* ViewController.swift in Sources */,
+				1EB508E41A78AC300086C1A7 /* WorldCup.xcdatamodeld in Sources */,
+				1EB508BE1A7899090086C1A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB508C91A7899090086C1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB508D41A7899090086C1A7 /* WorldCupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EB508CF1A7899090086C1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EB508B71A7899090086C1A7 /* WorldCup */;
+			targetProxy = 1EB508CE1A7899090086C1A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EB508C11A7899090086C1A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EB508C21A7899090086C1A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EB508C61A7899090086C1A7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EB508C71A7899090086C1A7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EB508D51A7899090086C1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EB508D61A7899090086C1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EB508D81A7899090086C1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WorldCup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EB508D91A7899090086C1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WorldCup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1EB508DB1A7899090086C1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WorldCupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldCup.app/WorldCup";
+			};
+			name = Debug;
+		};
+		1EB508DC1A7899090086C1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WorldCupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldCup.app/WorldCup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EB508B31A7899090086C1A7 /* Build configuration list for PBXProject "WorldCup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB508D51A7899090086C1A7 /* Debug */,
+				1EB508D61A7899090086C1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EB508D71A7899090086C1A7 /* Build configuration list for PBXNativeTarget "WorldCup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB508D81A7899090086C1A7 /* Debug */,
+				1EB508D91A7899090086C1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EB508DA1A7899090086C1A7 /* Build configuration list for PBXNativeTarget "WorldCupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB508DB1A7899090086C1A7 /* Debug */,
+				1EB508DC1A7899090086C1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1EB508E21A78AC2F0086C1A7 /* WorldCup.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1EB508E31A78AC300086C1A7 /* WorldCup.xcdatamodel */,
+			);
+			currentVersion = 1EB508E31A78AC300086C1A7 /* WorldCup.xcdatamodel */;
+			path = WorldCup.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1EB508B01A7899090086C1A7 /* Project object */;
+}
