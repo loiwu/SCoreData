@@ -12,10 +12,12 @@ import CoreData
 class CoreDataStack: Printable {
     var modelName : String
     var storeName : String
+    var options: NSDictionary?
     
-    init(modelName:String, storeName:String) {
+    init(modelName:String, storeName:String, options:NSDictionary? = nil) {
         self.modelName = modelName
         self.storeName = storeName
+        self.options = options
     }
     
     var description : String
@@ -53,7 +55,7 @@ class CoreDataStack: Printable {
             var storeError : NSError?
             store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil,
                 URL: storeURL,
-                options: nil,
+                options: self.options,
                 error: &storeError)
             if storeError != nil {
                 println("store error \(storeError!)")
