@@ -27,13 +27,18 @@ class ViewController: UIViewController {
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         //2
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: coreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: coreDataStack.context, sectionNameKeyPath: "qualifyingZone", cacheName: nil)
         
         //3
         var error: NSError? = nil
         if (!fetchedResultsController.performFetch(&error)) {
             println("Error: \(error?.localizedDescription)")
         }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let sectionInfo = fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+        return sectionInfo.name
     }
     
     func numberOfSectionsInTableView
