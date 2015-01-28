@@ -151,6 +151,7 @@
 				1E44496F1A78E398002F04C7 /* Sources */,
 				1E4449701A78E398002F04C7 /* Frameworks */,
 				1E4449711A78E398002F04C7 /* Resources */,
+				1E4449AD1A78ED84002F04C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -236,6 +237,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E4449AD1A78ED84002F04C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION != Release ]; then\n\necho \"Bumping build number...\"\n\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n\n\n#increment the build number (ie 115 to 116)\n\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\n\nif [[ \"${buildnum}\" == \"\" ]]; then\n\necho \"No build number in $plist\"\n\nexit 2\n\nfi\n\n\n\nbuildnum=$(expr $buildnum + 0001)\n\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\n\necho \"Bumped build number to $buildnum\"\n\n\n\nelse\n\necho $CONFIGURATION \" build - Not bumping build number.\"\n\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E44496F1A78E398002F04C7 /* Sources */ = {
