@@ -37,14 +37,13 @@ class ViewController: UIViewController {
     func numberOfSectionsInTableView
         (tableView: UITableView) -> Int {
             
-            return fetchedResultsController.sections!.count
+            return 1
     }
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             
-            let sectionInfo = fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
-            return sectionInfo.numberOfObjects
+            return 20
     }
     
     func tableView(tableView: UITableView,
@@ -64,12 +63,9 @@ class ViewController: UIViewController {
     }
     
     func configureCell(cell: TeamCell, indexPath: NSIndexPath) {
-        
-        let team = fetchedResultsController.objectAtIndexPath(indexPath) as Team
-        
-        cell.flagImageView.image = UIImage(named: team.imageName)
-        cell.teamLabel.text = team.teamName
-        cell.scoreLabel.text = "Wins: \(team.wins)"
+        cell.flagImageView.backgroundColor = UIColor.blueColor()
+        cell.teamLabel.text = "Team Name"
+        cell.scoreLabel.text = "Wins: 0"
     }
     
     func tableView(tableView: UITableView,
