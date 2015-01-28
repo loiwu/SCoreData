@@ -77,7 +77,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="World Cup!" id="wt8-M7-fCC">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="UvJ-BB-49b"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UvJ-BB-49b">
+                            <connections>
+                                <action selector="addTeam:" destination="BYZ-38-t0r" id="u8J-zS-dx8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="UvJ-BB-49b" id="Poe-Ai-ukT"/>
