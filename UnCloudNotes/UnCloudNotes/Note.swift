@@ -16,6 +16,7 @@ class Note : NSManagedObject
     @NSManaged var body : NSString
     @NSManaged var dateCreated: NSDate
     @NSManaged var displayIndex: NSNumber
+    @NSManaged var image: UIImage?
     
     override func awakeFromInsert()
     {
