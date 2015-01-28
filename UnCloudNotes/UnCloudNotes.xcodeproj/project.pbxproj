@@ -22,6 +22,7 @@
 		1E4449A71A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */; };
 		1E4449A91A78EA99002F04C7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A81A78EA99002F04C7 /* Note.swift */; };
 		1E4449AB1A78EC33002F04C7 /* UnCloudNotes.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */; };
+		D9C2002D1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UnCloudNotes.entitlements; sourceTree = "<group>"; };
 		1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		1E44496A1A78E398002F04C7 = {
 			isa = PBXGroup;
 			children = (
+				D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */,
 				1E4449751A78E398002F04C7 /* UnCloudNotes */,
 				1E44498D1A78E398002F04C7 /* UnCloudNotesTests */,
 				1E4449741A78E398002F04C7 /* Products */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4449A71A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld in Sources */,
+				D9C2002D1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */,
 				1E4449A41A78EA37002F04C7 /* AttachPhotoViewController.swift in Sources */,
 				1E44497D1A78E398002F04C7 /* NoteDetailViewController.swift in Sources */,
 				1E44497B1A78E398002F04C7 /* NotesListViewController.swift in Sources */,
