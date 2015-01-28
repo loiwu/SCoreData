@@ -56,12 +56,14 @@ cBIAAYagrxEBLQAHAAgAFwAzADQANQA/AEAAQQBcAF0AXgBkAGUAcQCFAIYAhwCIAIkAigCLAIwAjQCm
         <relationship name="entitymappings" type="0/0" destination="XDDEVENTITYMAPPING" idrefs="z104 z103"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z103">
+        <attribute name="sourcefilterpredicatestring" type="string">image != nil</attribute>
+        <attribute name="sourcename" type="string">Note</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">2</attribute>
         <attribute name="destinationname" type="string">Attachment</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z102"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z108 z109"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z109 z108"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z105"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z104">
