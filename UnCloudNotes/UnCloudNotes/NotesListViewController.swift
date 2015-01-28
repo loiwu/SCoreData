@@ -11,7 +11,7 @@ import CoreData
 
 //@objc (NotesListViewController)
 class NotesListViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-    lazy var stack : CoreDataStack = CoreDataStack(modelName:"UnCloudNotesDataModel", storeName:"UnCloudNotes", options:[NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true])
+    lazy var stack : CoreDataStack = CoreDataStack(modelName:"UnCloudNotesDataModel", storeName:"UnCloudNotes", options:[NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: false])
     
     var _notes : NSFetchedResultsController? = nil
     var notes : NSFetchedResultsController {

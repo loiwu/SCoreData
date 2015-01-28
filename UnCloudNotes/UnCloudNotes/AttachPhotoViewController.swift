@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AttachPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -30,10 +31,14 @@ class AttachPhotoViewController: UIViewController, UIImagePickerControllerDelega
         imagePicker.view.frame = view.bounds
     }
     
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary) {
         if let note = note {
-            note.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            let attachment = NSEntityDescription.insertNewObjectForEntityForName("Attachment", inManagedObjectContext: note.managedObjectContext!) as Attachment
+            attachment.dateCreated = NSDate()
+            attachment.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            attachment.note = note
         }
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
 }

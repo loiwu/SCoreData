@@ -16,11 +16,30 @@ class Note : NSManagedObject
     @NSManaged var body : NSString
     @NSManaged var dateCreated: NSDate
     @NSManaged var displayIndex: NSNumber
-    @NSManaged var image: UIImage?
+    @NSManaged var attachments: NSSet
     
     override func awakeFromInsert()
     {
         super.awakeFromInsert()
         dateCreated = NSDate()
+    }
+    
+    var image : UIImage? {
+        if let image = self.latestAttachment()?.image {
+        return image }
+        return nil
+    }
+    
+    func latestAttachment() -> Attachment? {
+        var attachmentsToSort = attachments.allObjects as [Attachment]
+        if attachmentsToSort.count == 0 {
+            return nil
+        }
+        attachmentsToSort.sort {
+            let date1 = $0.dateCreated.timeIntervalSinceReferenceDate
+            let date2 = $1.dateCreated.timeIntervalSinceReferenceDate
+            return date1 > date2
+        }
+        return attachmentsToSort[0]
     }
 }
