@@ -72,8 +72,16 @@ class ViewController: UIViewController {
         cell.scoreLabel.text = "Wins: \(team.wins)"
     }
     
-    func tableView(tableView: UITableView,
-        didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            let team = fetchedResultsController.objectAtIndexPath(indexPath) as Team
             
+            let wins = team.wins.integerValue
+            team.wins = NSNumber(integer: wins+1)
+            coreDataStack.saveContext()
+            
+            tableView.reloadData()
     }
+            
 }
+
