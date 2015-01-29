@@ -23,7 +23,9 @@
 		1E4449A91A78EA99002F04C7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4449A81A78EA99002F04C7 /* Note.swift */; };
 		1E4449AB1A78EC33002F04C7 /* UnCloudNotes.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */; };
 		1E9E3D601A79CCEB00396105 /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E3D5F1A79CCEB00396105 /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel */; };
-		D9C2002D1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */; };
+		1E9E3D621A79E70600396105 /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E3D611A79E70600396105 /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */; };
+		1E9E3D641A79E79C00396105 /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E3D631A79E79C00396105 /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift */; };
+		1E9E3D661A79ECE000396105 /* ImageAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E3D651A79ECE000396105 /* ImageAttachment.swift */; };
 		D9C2002F1A79428E00A47A3C /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2002E1A79428E00A47A3C /* Attachment.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +63,10 @@
 		1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		1E9E3D5E1A79CBFC00396105 /* UnCloudNotesDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		1E9E3D5F1A79CCEB00396105 /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel; sourceTree = "<group>"; };
+		1E9E3D611A79E70600396105 /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel; sourceTree = "<group>"; };
+		1E9E3D631A79E79C00396105 /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentToImageAttachmentMigrationPolicyV3toV4.swift; sourceTree = "<group>"; };
+		1E9E3D651A79ECE000396105 /* ImageAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAttachment.swift; sourceTree = "<group>"; };
 		D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
-		D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel; sourceTree = "<group>"; };
 		D9C2002E1A79428E00A47A3C /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +91,6 @@
 		1E44496A1A78E398002F04C7 = {
 			isa = PBXGroup;
 			children = (
-				D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */,
 				1E4449751A78E398002F04C7 /* UnCloudNotes */,
 				1E44498D1A78E398002F04C7 /* UnCloudNotesTests */,
 				1E4449741A78E398002F04C7 /* Products */,
@@ -106,6 +109,7 @@
 		1E4449751A78E398002F04C7 /* UnCloudNotes */ = {
 			isa = PBXGroup;
 			children = (
+				1E9E3D611A79E70600396105 /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */,
 				1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */,
 				1E4449781A78E398002F04C7 /* AppDelegate.swift */,
 				1E44497A1A78E398002F04C7 /* NotesListViewController.swift */,
@@ -124,6 +128,8 @@
 				1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */,
 				1E9E3D5F1A79CCEB00396105 /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel */,
 				1E4449A81A78EA99002F04C7 /* Note.swift */,
+				1E9E3D631A79E79C00396105 /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift */,
+				1E9E3D651A79ECE000396105 /* ImageAttachment.swift */,
 			);
 			path = UnCloudNotes;
 			sourceTree = "<group>";
@@ -272,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4449A71A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld in Sources */,
-				D9C2002D1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */,
 				1E4449A41A78EA37002F04C7 /* AttachPhotoViewController.swift in Sources */,
 				1E44497D1A78E398002F04C7 /* NoteDetailViewController.swift in Sources */,
 				1E9E3D601A79CCEB00396105 /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel in Sources */,
@@ -281,9 +286,12 @@
 				1E4449A21A78EA0E002F04C7 /* ImageTransformer.swift in Sources */,
 				1E4449A91A78EA99002F04C7 /* Note.swift in Sources */,
 				1E4449791A78E398002F04C7 /* AppDelegate.swift in Sources */,
+				1E9E3D621A79E70600396105 /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */,
 				1E44499D1A78E99D002F04C7 /* CreateNoteViewController.swift in Sources */,
 				1E44499B1A78E78C002F04C7 /* CoreDataStack.swift in Sources */,
+				1E9E3D661A79ECE000396105 /* ImageAttachment.swift in Sources */,
 				1E44499F1A78E9C3002F04C7 /* NoteTableViewCell.swift in Sources */,
+				1E9E3D641A79E79C00396105 /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

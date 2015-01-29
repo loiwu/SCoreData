@@ -30,8 +30,8 @@ class Note : NSManagedObject
         return nil
     }
     
-    func latestAttachment() -> Attachment? {
-        var attachmentsToSort = attachments.allObjects as [Attachment]
+    func latestAttachment() -> ImageAttachment? {
+        var attachmentsToSort = attachments.allObjects as [ImageAttachment]
         if attachmentsToSort.count == 0 {
             return nil
         }

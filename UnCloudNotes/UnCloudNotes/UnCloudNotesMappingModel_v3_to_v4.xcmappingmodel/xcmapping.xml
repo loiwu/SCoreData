@@ -99,6 +99,7 @@
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z109"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z113">
+        <attribute name="migrationpolicyclassname" type="string">UnCloudNotes.AttachmentToImageAttachmentMigrationPolicyV3toV4</attribute>
         <attribute name="sourcename" type="string">Attachment</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">3</attribute>
