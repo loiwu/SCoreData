@@ -58,6 +58,7 @@
 		1E4449A81A78EA99002F04C7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1E4449AA1A78EC33002F04C7 /* UnCloudNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UnCloudNotes.entitlements; sourceTree = "<group>"; };
 		1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		1E9E3D5E1A79CBFC00396105 /* UnCloudNotesDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "UnCloudNotesDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		D9C2002C1A793F3B00A47A3C /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel; sourceTree = "<group>"; };
 		D9C2002E1A79428E00A47A3C /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
@@ -489,11 +490,12 @@
 		1E4449A51A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				1E9E3D5E1A79CBFC00396105 /* UnCloudNotesDataModel 4.xcdatamodel */,
 				D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */,
 				1E4449AE1A78F01E002F04C7 /* UnCloudNotesDataModel 2.xcdatamodel */,
 				1E4449A61A78EA59002F04C7 /* UnCloudNotesDataModel.xcdatamodel */,
 			);
-			currentVersion = D9C2002B1A793B6A00A47A3C /* UnCloudNotesDataModel 3.xcdatamodel */;
+			currentVersion = 1E9E3D5E1A79CBFC00396105 /* UnCloudNotesDataModel 4.xcdatamodel */;
 			path = UnCloudNotesDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
