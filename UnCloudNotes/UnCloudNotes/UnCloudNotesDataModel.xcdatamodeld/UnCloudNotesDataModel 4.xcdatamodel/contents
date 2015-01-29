@@ -18,8 +18,8 @@
         <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attachment" inverseName="note" inverseEntity="Attachment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Attachment" positionX="-135" positionY="-90" width="128" height="75"/>
+        <element name="Attachment" positionX="9" positionY="-81" width="128" height="75"/>
         <element name="Note" positionX="-342" positionY="-118" width="128" height="118"/>
-        <element name="ImageAttachment" positionX="-234" positionY="-72" width="128" height="103"/>
+        <element name="ImageAttachment" positionX="-20" positionY="180" width="128" height="103"/>
     </elements>
 </model>
